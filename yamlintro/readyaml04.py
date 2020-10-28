@@ -9,8 +9,12 @@ def main():
     yammyfile = open("/home/student/mycode/yamlintro/myYAML.yml", "r")
         
     ## pull in YAML as Python lists and dictionaries
-    pyyammy = yaml.load(yammyfile)
+    # pyyammy = yaml.load(yammyfile)
     
+    #this will stop the warning in readyaml03.py
+    pyyammy = yaml.load(yammyfile, Loader=yaml.FullLoader)
+
+
     ## close our open file object
     yammyfile.close()
     
