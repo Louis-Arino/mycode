@@ -6,13 +6,13 @@ import paramiko
 import os
 
 ## where to connect to
-t = paramiko.Transport("10.10.2.3", 22) ## IP and port
+ip = input("What IP / Machine do you wish to connect to?\n")
+t = paramiko.Transport(ip, 22) ## IP and port
 
 ## how to connect (see other labs on using id_rsa private/public keypairs)
-
-
-t.connect(username="bender", password="alta3")
-
+user = input("What Username should I use?\n")
+passwd = input("What's the super secret password?\n")
+t.connect(username=user, password=passwd)
 
 ## Make an sftp connection object
 sftp = paramiko.SFTPClient.from_transport(t)
@@ -24,3 +24,4 @@ for x in os.listdir("/home/student/filestocopy/"): # iterate on directory conten
 
 ## close the connection
 sftp.close() # close the connection
+

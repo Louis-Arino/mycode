@@ -1,0 +1,7 @@
+
+#!/usr/bin/python3
+
+cd ~/mycode
+git add *
+git commit -m "Learning to track ISS"
+git push origin main
