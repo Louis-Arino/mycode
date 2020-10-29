@@ -1,0 +1,20 @@
+--- 
+- name: Ansible Challenge
+   hosts:
+   vars_prompt:
+   - name: "apt package_name"
+     prompt: "What package do you want apt to install?"
+     private: no
+
+   tasks:
+   - name: Debug our variable
+     debug:
+     msg: "{{ apt_package_name }}"
+    
+   - name: Apt install our apt_package_name
+     apt:
+       name: "{{ apt_package_name }}"
+       state: present
+       become: True
+
+
