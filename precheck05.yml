@@ -25,7 +25,7 @@
     # Precheck conditional number of interfaces
   - fail:
       msg: "FAIL. Network device lacks the correct number of interfaces."
-    when: ansible_facts.net_interfaces|length != 14
+    when: ansible_facts.net_interfaces|length != 1
     
     # Firmware precheck on correct major and minor versions
   - fail:
