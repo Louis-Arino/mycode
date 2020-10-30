@@ -3,7 +3,7 @@
 
   tasks:
     ## If you want your script to only ever execute once
-    - script: /home/student/mycode/pyhello02.py
+    - script: pyhello02.py
       args:
         ## execute in python3 and only run if the following file is MISSING
         executable: python3
